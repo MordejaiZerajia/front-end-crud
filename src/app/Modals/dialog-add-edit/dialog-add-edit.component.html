@@ -1,0 +1,50 @@
+<h1 mat-dialog-title>{{actionTitle}} Employee</h1>
+<div mat-dialog-content>
+
+    <form [formGroup]="formEmployee">
+        <mat-grid-list cols="1" rowHeight="80px">
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Complete Name</mat-label>
+                    <input matInput formControlName="completeName" autocomplete="off">
+                </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Area</mat-label>
+                    <mat-select formControlName="idArea">
+                      <mat-option *ngFor="let item of areaList" [value]="item.idArea">
+                        {{item.idArea}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Salary</mat-label>
+                    <input matInput formControlName="salary" autocomplete="off" type="number">
+                </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Hire Date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="hireDate">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+            </mat-grid-tile>
+
+        </mat-grid-list>
+    </form>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close color="warn">Return</button>
+    <button mat-raised-button color="primary" 
+    (click)="addEditEmployee()"
+    [disabled]="formEmployee.invalid"
+    >{{actionButton}}</button>
+</div>
