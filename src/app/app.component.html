@@ -1,3 +1,4 @@
+
 <div style="width:70%;margin:40px auto">
   <h1>Employee list</h1>
   
@@ -14,19 +15,19 @@
       <!-- Position Column -->
       <ng-container matColumnDef="CompleteName">
         <th mat-header-cell *matHeaderCellDef> Complete Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.CompleteName}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.completeName}} </td>
       </ng-container>
   
       <!-- Name Column -->
       <ng-container matColumnDef="Area">
         <th mat-header-cell *matHeaderCellDef> Area </th>
-        <td mat-cell *matCellDef="let element"> {{element.Area}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.areaName}} </td>
       </ng-container>
   
       <!-- Weight Column -->
       <ng-container matColumnDef="Salary">
         <th mat-header-cell *matHeaderCellDef> Salary </th>
-        <td mat-cell *matCellDef="let element"> {{element.Salary}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.salary}} </td>
       </ng-container>
   
       <!-- Symbol Column -->

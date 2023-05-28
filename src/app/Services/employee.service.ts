@@ -18,8 +18,8 @@ export class EmployeeService{
     constructor(private http: HttpClient){}
 
     // function to return the employee list
-    getList():Observable<Employee>{
-        return this.http.get<Employee>(`${this.apiUrl}list`);
+    getList():Observable<Employee[]>{
+        return this.http.get<Employee[]>(`${this.apiUrl}list`);
     }
 
     add(model:Employee):Observable<Employee>{

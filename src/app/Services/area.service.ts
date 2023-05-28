@@ -18,8 +18,8 @@ export class AreaService{
     constructor(private http: HttpClient){}
 
     // function to return the area list
-    getList():Observable<Area>{
-        return this.http.get<Area>(`${this.apiUrl}list`);
+    getList():Observable<Area[]>{
+        return this.http.get<Area[]>(`${this.apiUrl}list`);
     }
 
 }

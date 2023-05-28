@@ -49,8 +49,8 @@ export class AppComponent implements AfterViewInit, OnInit {
       // if response is satus.ok
       next: (dataResponse) => {
         console.log(dataResponse)
-        //this.dataSource.data = dataResponse;
-        this.dataSource.data = [dataResponse];
+        this.dataSource.data = dataResponse;
+        //this.dataSource.data = [dataResponse];
       }, error: (e) => { }
     })
   }

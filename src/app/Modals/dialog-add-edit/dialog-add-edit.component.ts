@@ -55,8 +55,8 @@ export class DialogAddEditComponent implements OnInit {
         this._areaService.getList().subscribe({
             // if status.ok
             next: (data) => {
-                //this.areaList = data;
-                this.areaList = [data];
+                this.areaList = data;
+                //this.areaList = [data];
             }, error: (e) => {
                 console.log(e);
             }
